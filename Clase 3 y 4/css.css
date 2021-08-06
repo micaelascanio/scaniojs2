@@ -1,0 +1,44 @@
+.title{
+    font-family:'Abril Fatface', cursive;
+    font-size: 50px;
+    text-align: center;
+    background-color: white;
+    -webkit-text-stroke: 1px grey;
+    color: transparent;
+    padding: 40px;
+}
+.description{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    text-align: center;
+    color: grey;
+    padding: 0px 0px 20px 0px;
+}
+
+.carousel-cell {
+    width: 100%;
+    height: auto;
+}
+.buttonC{
+    padding: 5px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+    text-align: center;
+    color: grey;
+    background-color: white;
+}
+.buttonC:hover{
+    padding: 5px;
+    font-family: 'Cormorant Garamond', serif;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+.buttonPosition{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+}
