@@ -3,6 +3,10 @@ let producto = `Añadiste Planta Monstera`;
 let precio = 700 ;
 
 
+function compraFinalizada (){
+  alert(`Finalizaste la compra, te redirigiremos a seleccionar medio de pago`)
+}
+
 alert(producto)
   let confirmar = confirm("Desea agregar un producto?")
 
@@ -11,4 +15,5 @@ while(confirmar) {
   alert(`Seleccionaste Planta Monstera por ${cantidad} unidad/es a $${precio*cantidad}`)
   confirmar = confirm("Desea agregar un producto?")
 }
-alert(`Finalizaste la compra, te redirigiremos a seleccionar medio de pago`)
+
+compraFinalizada ()
