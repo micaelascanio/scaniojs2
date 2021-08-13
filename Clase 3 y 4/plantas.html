@@ -4,28 +4,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cormorant+Garamond:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/flickity.min.css">
+    <link rel="stylesheet" href="css.css">
     <title>Plantas</title>
 </head>
 <body>
+    <!--esta es la navbar-->     
+    <header class="container-fluid">    
+        <nav class="navbar navbar-expand-lg navbar-light navBar">
+                <div>
+                    <button class="navbar-toggler menuHamburguesa navSection" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>      
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active navSection"> 
+                            <a class="nav-item navSection " href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item active navSection">                             
+                            <a class="nav-item navSection" href="plantas.html">Plantas</a>
+                        </li>
+                        <li class="nav-item active navSection"> 
+                            <a class="nav-item navSection" href="macetas.html">Macetas</a>
+                        </li>                           
+                        <li class="nav-item active navSection"> 
+                            <a class="nav-item navSection" href="cuidado.html">Cuidado</a>
+                        </li>
+                        <li class="nav-item active navSection"> 
+                            <a class="nav-item navSection" href="contacto.html">Contacto</a>                        
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav> 
+    </header>   
+    <section class="container-fluid title">
+        <div class="row">
+            <h1 class="col-12">Sunflower.</h1>
+        </div> 
+    </section>
+    <!-- SLIDERS -->
+    <section class="carousel" data-flickity>
+        <div class="carousel-cell">
+            <img src="img/1.jpg" class="d-block w-100" alt="Plantas">
+        </div>
+        <div class="carousel-cell">
+            <img src="img/2.jpg" class="d-block w-100" alt="Plantas">
+        </div>
+        <div class="carousel-cell">
+            <img src="img/3.jpg" class="d-block w-100" alt="Plantas">
+        </div>
+    </section>
+    <!-- SLIDERS --> 
+    <h2 class="subSection">Plantas de interior</h2>
     <main class="container">
         <section class="row">
             <div class="col-lg-4 row-sm-1">
-                <img class="w-100 imagen" src="../img/imgSoria.png"  alt="Primer libro">
-                <h3 class="nombreLibro animate__animated animate__fadeInDown">Ni neurosis ni psicosis</h3>
-                <p class="dLibro animate__animated animate__fadeInDown"> Es una propuesta de pensar la psicopatología en el sentido de aggiornar los parámetros de la psiquiatría, de la nosología freudiana, incluso del Lacan estructural, de una manera más dinámica, flexible, y cuya teorización pueda sostenerse a partir de los nudos y la lógica no-toda.</p>
-            </div>     
+                <img class="w-100" src="./img/ctenanthe2.webp"  alt="Ctenanthe" width="150px" height="350px">
+                <h3 class="producto">Ctenanthe</h3>
+                <p class="detalle">Ctenanthe es un género con 18 especies de plantas herbáceas perteneciente a la familia Marantaceae.​ Es originario del centro y sur de la América tropical.</p>
+                <h4 class="precio">Valor por unidad : $900</h4>
+            </div>  
             <div class="col-lg-4 row-sm-2">
-                <img class="w-100 imagen" src="../img/imgSegato.png" alt="Segundo libro">
-                <h3 class="nombreLibro animate__animated animate__fadeInDown">Las estructuras elementales de la violencia</h3>
-                <p class="dLibro animate__animated animate__fadeInDown">"Es en la tensión y mutua alimentación entre dos ejes: el de los iguales –aliados o competidores– y el de los desiguales –dominadores y dominados– donde, según la autora, puede ser investigada la etiología de la violencia, su usina de producción."</p>
+                <img class="w-100" src="./img/dieffenbachia.webp" alt="Dieffenbachia" width="150px" height="350px">
+                <h3 class="producto">Dieffenbachia</h3>
+                <p class="detalle">Dieffenbachia es un género de plantas tropicales de la familia de las aráceas, notables por las características manchas claras en sus hojas. Se conocen cerca de 30 especies, alguna utilizadas frecuentemente como planta de interior debido a su tolerancia a la sombra.</p>
+                <h4 class="precio">Valor por unidad : $750</h4>
             </div>
             <div class="col-lg-4 row-sm-3">
-                <img class="w-100 imagen" src="../img/imgLacan.png" alt="Tercer libro">
-                <h3 class="nombreLibro animate__animated animate__fadeInDown">El sinthome</h3>
-                <p class="dLibro animate__animated animate__fadeInDown">Uniendo la teoría matemática con la trama intrincada de la escritura joyceana -en la que se produce la invasión del orden simbólico por el goce privado del sujeto-, Lacan redefine el síntoma psicoanalítico en los términos de su topología final del sujeto.</p>
+                <img class="w-100" src="./img/monstera3.webp" alt="Monstera" width="150px" height="350px">
+                <h3 class="producto">Monstera</h3>
+                <p class="detalle">Monstera deliciosa, llamada comúnmente cerimán o costilla de Adán, es una especie de planta trepadora de la familia Araceae, endémica de selvas tropicales, que se distribuye desde el centro y sur de México hasta el norte de Argentina.</p>
+                <h4 class="precio">Valor por unidad : $1200</h4>
             </div>
         </section>
-    </main>
-
+        <footer class="buttonPosition mt-5 mb-5">
+            <a href="#" class="btn btn-light btn-lg buttonC" role="button" aria-pressed="true">Contactanos</a>
+        </footer>
+        <script src="app.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/flickity-docs.min.js"></script>
 </body>
 </html>
