@@ -39,10 +39,12 @@
     div1.appendChild(p1)
     div1.appendChild(h41)
 
-
+    div1.setAttribute("class","div1")
     h31.setAttribute("class","producto")
     p1.setAttribute("class","detalle")
     h41.setAttribute("class", "precio")
+    img1.setAttribute("class","img1")
+    
 })
 
 

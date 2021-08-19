@@ -110,3 +110,17 @@
     color: white;
     text-decoration: none;
 }
+/*estos son nuevos estilos para el desafio DOM de objetos creados desde JS*/
+.div1{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1 ;
+}
+
+.img1{
+    width: 250px;
+    height: 300px;
+    
+}
