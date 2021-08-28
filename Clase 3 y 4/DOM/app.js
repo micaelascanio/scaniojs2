@@ -124,6 +124,7 @@ const aniadirATabla = (productoAniadido) => {
 
 }
 
+// esta es la funcion de eliminar producto seleccionado 
 
 const eliminarProducto = (productoAniadido) => {
   
@@ -134,7 +135,6 @@ const eliminarProducto = (productoAniadido) => {
 }
 
 
-// let allProducts = productoAniadido.filter(e => e.id != id)
 
  
 
