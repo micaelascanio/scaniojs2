@@ -19,15 +19,14 @@
     font-size: 32px;
     text-align: center;
     color: grey;
-    padding: 20px;  
+    padding: 15px;  
 }
 .subSection{
     font-family: 'Cormorant Garamond', serif;
     font-size: 50px;
     text-align: center;
-    color: black;
+    color: #AFCC94;
     padding: 60px 0px 60px 0px;
-    font-weight: bold;
 }
 .subContacto{
     font-family: 'Cormorant Garamond', serif;
@@ -42,7 +41,7 @@
     font-size: 17px;
     text-align: center;
     color: black;
-    padding: 20px;
+    padding: 7px;
 }
 .campos{
         font-family: 'Cormorant Garamond', serif;
@@ -56,7 +55,7 @@
     font-size: 20px;
     text-align: center;
     color: black;
-    padding: 15px;
+    padding: 10px;
     font-weight: bold;
 }
 
@@ -67,17 +66,19 @@
 .buttonC{
     padding: 5px;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     color: grey;
     background-color: white;
+    border-color: lightgrey;
+    border-radius: 10px;
 }
 .buttonC:hover{
     padding: 5px;
     font-family: 'Cormorant Garamond', serif;
     text-align: center;
     color: white;
-    background-color: grey;
+    background-color: lightgrey;
 }
 .buttonPosition{
     display: flex;
@@ -110,17 +111,18 @@
     color: white;
     text-decoration: none;
 }
-/*estos son nuevos estilos para el desafio DOM de objetos creados desde JS*/
-.div1{
+.div1, .div2{
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    flex-grow: 1 ;
+    flex-grow: 1;
 }
-
-.img1{
+.img1, .img2{
     width: 250px;
-    height: 300px;
-    
+    height: 150px;
+}
+.btnBorrar{
+    background-color: red;
+    color: black;
 }
