@@ -1,24 +1,24 @@
 [
-    {
-        "img": "../img/ctenanthe2.webp",
-        "nombre": "Ctenanthe",
-        "categoria": "Plantas",
-        "precio": "900",
-        "id": "1"
+       {
+        "img": "../img/macetapie.webp",
+        "nombre": "Maceta de pie",
+        "precio": "2500",
+        "categoria": "Macetas",
+        "id": "4"
     },
     {
-        "img": "../img/dieffenbachia.webp",
-        "nombre": "Dieffenbachia",
-        "categoria": "Plantas",
-        "precio": "750",
-        "id": "2"
+        "img": "../img/macetaceramica.jpg",
+        "nombre": "Maceta con trama",
+        "precio": "3200",
+        "categoria": "Macetas",
+        "id": "5"
     },
     {
-        "img": "../img/monstera3.webp",
-        "nombre": "Monstera",
-        "categoria": "Plantas",
-        "precio": "1200",
-        "id": "3"
+        "img": "../img/macetaceramica2.jpg",
+        "nombre": "Maceta de cerámica",
+        "precio": "2000",
+        "categoria": "Macetas",
+        "id": "6"
     }
 ]
 

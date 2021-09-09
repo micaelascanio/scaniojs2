@@ -1,20 +1,9 @@
 
-import * as $ from 'jquery';
 
 
-//esta es la funcion que identifica el id del producto seleccionado y lo agrega a la lista
+// este es el array del carrito 
 
-
-const aniadirCarrito = (evento) => {
-
-    const objetoIdentificado = macetas.find(e => e.id == evento.target.id)
-
-    carrito.push(objetoIdentificado)
-
-    aniadirATabla(objetoIdentificado)
-
-
-}
+carrito = []
 
 // estos son los campos dinamicos de la tabla que hara las veces de carrito
 
@@ -25,7 +14,7 @@ const aniadirATabla = (productoAniadido) => {
     let ObjToJson = JSON.stringify(productoAniadido)
     localStorage.setItem("macetas", ObjToJson)
 
-    let tabla = $("#productosListados")
+   // let tabla = $("#productosListados")
 
 
     let tr1 = $("#productosListados").append("<tr></tr>")
@@ -51,14 +40,15 @@ const aniadirATabla = (productoAniadido) => {
 
 const eliminarProducto = (productoAniadido) => {
 
-    let tabla = $("#productosListados")
+    //let tabla = $("#productosListados")
 
-    tabla.deleteRow(productoAniadido.target.fatherElement)
+    $("#productosListados").deleteRow(productoAniadido.target.fatherElement) //prorbar con childElement
 
 }
 
 
-// aca se aplica ajax al proyecto
+// aca se aplica ajax al proyecto 
+
 
 //let productosMacetas = $("#productosMacetas")
 
@@ -72,20 +62,32 @@ $.get(url, (respuesta, estado)=>{
         respuesta.forEach (e=> {
         $("#productosMacetas").append(`
         <div class="div1">
-        <img class="img1 w-100">${e.img}</img>
+        <img class="img1" src=${e.img}></img>
         <h3 class="producto">${e.nombre}</h3>
         <p class="detalle">${e.categoria}</p>
         <h4 class="precio">${e.precio}</h4>
-        <button class="btn btn-light col-lg-4 row-sm-1 buttonC">Comprar</button>
-
-
+        <button class="buttonC" id = ${e.id}>Comprar</button>
         </div>
         `)
+            
         })
-
-        console.log(respuesta)
     }
 
-})
+    $(document).ready(function(){
 
+    $(document).on(`click`,$(`.buttonC`),(e)=>{
+        
+    
+            const objetoIdentificado = url.find(e => e.id == evento.target.id)
+        
+            carrito.push(objetoIdentificado)
+        
+            aniadirATabla(objetoIdentificado)
+
+    })
+})})
+   
+
+    
+        
 
