@@ -23,7 +23,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active navSection"> 
-                            <a class="nav-item navSection " href="./index.html">Home</a>
+                            <a class="nav-item navSection " href="../index.html">Home</a>
                         </li>
                         <li class="nav-item active navSection">                             
                             <a class="nav-item navSection" href="plantas.html">Plantas</a>
@@ -31,9 +31,6 @@
                         <li class="nav-item active navSection"> 
                             <a class="nav-item navSection" href="macetas.html">Macetas</a>
                         </li>                           
-                        <li class="nav-item active navSection"> 
-                            <a class="nav-item navSection" href="cuidado.html">Cuidado</a>
-                        </li>
                         <li class="nav-item active navSection"> 
                             <a class="nav-item navSection" href="contacto.html">Contacto</a>                        
                         </li>
@@ -61,33 +58,27 @@
         </div>
     </section>
     <!-- FORMULARIO -->
-    <div class="col-lg-8 col-md-8 texto-animado">
-        <div class="location1" data-aos="fade-left">
-            <div class="pt-5 pl-5">
-                <h3 class="subContacto">Contactanos</h3>                                
-            </div>
-            <div class="pt-3 pl-5 pb-5 pr-5">
-                <label for="exampleFormControlInput1" class="form-label"></label>
-                <input class="form-control campos"  placeholder="Nombre y Apellido">
-                <label for="exampleFormControlInput1" class="form-label"></label>
-                <input class="form-control campos"  placeholder="DNI">
-                <label for="exampleFormControlInput1" class="form-label"></label>
-                <input class="form-control campos"  placeholder="Email">
-                <label for="exampleFormControlInput1" class="form-label"></label>
-                <input class="form-control campos"  placeholder="Teléfono">
-                <label for="exampleFormControlTextarea1" class="form-label"></label>
-                <textarea class="form-control campos" id="exampleFormControlTextarea1" rows="3" placeholder="Mensaje"></textarea>
-                <div class="p-4">
-                    <button class="btn btn-light btn-md buttonC" href="productos-detalle.html">ENVIAR</button>
-                </div>
-            </div>
-        </div>
+    <br>
+    <br>
+    <div class="location1" data-aos="fade-left">
+        <div class="contactForm"id="resetForm"></div>
     </div>
+    <div id="sendBtn"></div>
             <!-- FORMULARIO -->      
+
+    <!--Este es el modal de envio del formulario-->
+
+    <div id = "myModal" class= "modal" tabindex="-1">
+        <!--<div class="modal-dialog modal-sm ">
+          <div class="modal-content campos"></div>              
+        </div>
+    </div>-->
+
+
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="../js/bootstrap.min.js"></script>
         <script src="../js/flickity-docs.min.js"></script>
-        <script src="app.js"></script>
+        <script src="contacto.js"></script>
 </body>
 </html>

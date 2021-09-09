@@ -81,8 +81,6 @@ productos.forEach(e => {
 })
 
 
-
-
 // estos son los campos dinamicos de la tabla que hara las veces de carrito
 
 const aniadirATabla = (productoAniadido) => {
@@ -133,83 +131,3 @@ const eliminarProducto = (productoAniadido) => {
   tabla.deleteRow(productoAniadido.target.fatherElement)
 
 }
-
-
-
- 
-
-
-
-
-////////////////////////////////////////////
-
-//para que no imprima el listado es  let ultimoElemento = comprar.lastElementChild while(ultimoElemento) comprar.deleteElement(ultimoElemento) let ultimoElemento = comprar.lastElementChild
-
-/*
-//esta es la funcion para el evento
-const comprar = () => {
-
-}
-///este evento tiene que estar dentro del FOREACH para que cada vez que se clickee el boton, se cree el producto en la tabla
-botonComprar.addEventListener("click", comprar)
-
-
-//esto corresponde a la hoja html MACETAS
-/* CODIGO COMENTADO PARA PROXIMOS DESAFIOS
-  class maceta {
-  constructor(nombre, categoria, precio, disponible,imagenes, botonComprar) {
-  this.nombre = nombre;
-  this.categoria = categoria;
-  this.precio = precio;
-  this.disponible = disponible;
-  this.imagenes = imagenes;
-  this.botonComprar = botonComprar;
-}}
-
-  const maceta1 = new maceta("Maceta de pie", "Macetas", 2500 , "si", "../img/macetapie.webp");
-  const maceta2 = new maceta("Maceta ceramica", "Macetas", 3200, "si","../img/macetaceramica.jpg");
-  const maceta3 = new maceta("Maceta de cerámica común", "Macetas", 2000, "si","../img/macetaceramica2.jpg");
-
-  const macetas = [maceta1,maceta2,maceta3]
-
-  let productosMacetas = document.getElementById("productosMacetas")
-
-  macetas.forEach(e =>  {
-  let div2 = document.createElement("div")
-
-  let img2 = new Image(90,350)
-  img2.src = e.imagenes
-
-  let h32 = document.createElement("h3")
-  h32.textContent = e.nombre
-
-  let p2 = document.createElement("p")
-  p2.textContent = e.categoria
-
-  let h42 = document.createElement("h4")
-  h42.textContent = e.precio
-
-  let botonComprar2 = document.createElement("button")
-  botonComprar2.textContent = "Comprar"
-
-  productosPlantas.appendChild(div2)
-  div2.appendChild(img2)
-  div2.appendChild(h32)
-  div2.appendChild(p2)
-  div2.appendChild(h42)
-  div2.appendChild(botonComprar2)
-
-  div2.setAttribute("class","div1")
-  h32.setAttribute("class","producto")
-  p2.setAttribute("class","detalle")
-  h42.setAttribute("class", "precio")
-  img2.setAttribute("class","img1")
-  img2.setAttribute("class","w-100")
-  botonComprar2.setAttribute("class","btn btn-light")
-  botonComprar2.setAttribute("class","col-lg-4 row-sm-1")
-  botonComprar2.setAttribute("class","buttonC")
-
-})
-*/
-
-
