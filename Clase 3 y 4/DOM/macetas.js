@@ -1,7 +1,7 @@
 
 
 
-// este es el array del carrito 
+// este es el array del carrito
 
 carrito = []
 
@@ -10,98 +10,115 @@ carrito = []
 const aniadirATabla = (productoAniadido) => {
 
 
-
     let ObjToJson = JSON.stringify(productoAniadido)
     localStorage.setItem("macetas", ObjToJson)
 
-   // let tabla = $("#productosListados")
-
-
-    let tr1 = $("#productosListados").append("<tr></tr>")
-
-
-    let td1 = tr1.append(`<td>${productoAniadido.nombre}</td>`)
-    
-
-    let td2 = tr1.append(`<td>${productoAniadido.categoria}</td>`)
-
-
-    let td3 = tr1.append(`<td>${productoAniadido.precio}</td>`)
-
-
-    let td4 = tr1.append(`<td></td>`)
-
-
-    let btnBorrar = td4.append(`<button class= "btnBorrar">Quitar</button>`)
+    let tr1 = $("#productosListados").append(`<tr><td>${productoAniadido.nombre}</td>
+      <td>${productoAniadido.categoria}</td>
+      <td>${productoAniadido.precio}</td>
+      <td><button class= "btnBorrar" id="btnBorrar${productoAniadido.id}" onClick="eliminarProducto(this)">Quitar</button></td>
+      </tr>`)
 
 }
 
-// esta es la funcion de eliminar producto seleccionado 
+
+
+// esta es la funcion de eliminar producto seleccionado
 
 const eliminarProducto = (productoAniadido) => {
 
     //let tabla = $("#productosListados")
-
-    $("#productosListados").deleteRow(productoAniadido.target.fatherElement) //prorbar con childElement
-
+    productoAniadido.parentElement.parentElement.remove() 
 }
 
 
-// aca se aplica ajax al proyecto 
+// aca se aplica ajax al proyecto donde pushea elementos traidos de json a la tabla
 
 
-//let productosMacetas = $("#productosMacetas")
 
 const url = "./productos.json"
+const clickButton = (id) => {
 
+  $.get(url, (respuesta, estado)=>{
 
+      if (estado === "success") {
+
+          const a = respuesta.find(e => e.id == id)
+          carrito.push(a)
+          aniadirATabla(a)
+      }
+
+  })
+
+}
+
+// estos son los elementos traidos desde JSON
 $.get(url, (respuesta, estado)=>{
 
     if (estado === "success") {
 
         respuesta.forEach (e=> {
+          
         $("#productosMacetas").append(`
         <div class="div1">
         <img class="img1" src=${e.img}></img>
         <h3 class="producto">${e.nombre}</h3>
         <p class="detalle">${e.categoria}</p>
         <h4 class="precio">${e.precio}</h4>
-        <button class="buttonC" id = ${e.id}>Comprar</button>
+        <button class="buttonC" id = ${e.id} onClick="clickButton(${e.id})">Comprar</button>
         </div>
         `)
-            
+
         })
     }
 
-    $(document).ready(function(){
+})
 
-    $(document).on(`click`,$(`.buttonC`),(e)=>{
-        
-    
-            const objetoIdentificado = url.find(e => e.id == evento.target.id)
-        
-            carrito.push(objetoIdentificado)
-        
-            aniadirATabla(objetoIdentificado)
 
-    })
-})})
-   
 
-    
-        
+
+$("#totalCompra").on(`click`, ()=> {
+    let suma = 0;
+    productoAniadido.precio.each(()=>{
+       suma += parseFloat($(this).val());
+       
+});
+
+})
+
 
 /*
 
 temrinar de crear la funcion
 
 
-const compraFinalizada = funcion de suma de precios de los productos seleccionados e.precio + e.precio 
+const compraFinalizada = funcion de suma de precios de los productos seleccionados e.precio + e.precio
 
-// este es el alert de sweetalert 
+// este es el alert de sweetalert
 if(Swal.fire('El total de tu compra es ${compraFinzalida}, ¿deseas continuar?')){
     $("#totalCompra").append(<tr>compraFinalizada</tr>)
 }
 
+let precioTotal = ${e.precio}
+compraFinalizada = precioTotal++
+
+
+
+///// esta es la suma total
+$("#totalCompra").on(`click`, (${})=> {
+    let suma = 0;
+aniadirTabla.precio.each(()=>{
+       suma += parseFloat($(this).val());
+});
+
+})
+
+
+
+let suma = 0;
+aniadirTabla.precio.each(()=>{
+       suma += parseFloat($(this).val());
+});
 
 */
+
