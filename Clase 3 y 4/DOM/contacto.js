@@ -23,7 +23,7 @@ sendBtn.append(`<form><br>
 //esta es la funcion que hace aparecer al modal
 
 sendBtn.click((e) => {
-    //debugger
+    
     e.preventDefault();
 
     let modal = $("#myModal");
@@ -36,29 +36,7 @@ sendBtn.click((e) => {
 
     let inputMessage = $("#inputMessage").val();
 
-
-    modal.append(`<div class="modal" id="myModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">Atención</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <div class="modal-body"> A continuación te rediregiremos al formulario de contacto. ¿Deseas continuar?</div>  
-            <div class="modal-footer">
-                <button type="button" class="btn btn-dark" data-dismiss="modal">Continuar</button>
-                <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
-            </div>
-        </div>
-    </div>
-    </div>`)
-
-    
-    //console.log (inputName,inputEmail,inputNumber,inputMessage)
-    //alert(`Gracias por escribirnos, te contactaremos al siguiente email: ${email}`)
-    
-   $(modal).modal('show')
-      
+    Swal.fire(`<p class="campos">Gracias por escribirnos, te contactaremos al siguiente email: ${inputEmail}</p>`)
 
    // location.reload()
 })

@@ -91,3 +91,17 @@ $.get(url, (respuesta, estado)=>{
     
         
 
+/*
+
+temrinar de crear la funcion
+
+
+const compraFinalizada = funcion de suma de precios de los productos seleccionados e.precio + e.precio 
+
+// este es el alert de sweetalert 
+if(Swal.fire('El total de tu compra es ${compraFinzalida}, ¿deseas continuar?')){
+    $("#totalCompra").append(<tr>compraFinalizada</tr>)
+}
+
+
+*/
