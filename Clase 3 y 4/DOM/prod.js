@@ -61,11 +61,13 @@ $.get(url, (respuesta, estado)=>{
           
         $("#productosMacetas").append(`
         <div class="div1">
+        <br>
         <img class="img1" src=${e.img}></img>
         <h3 class="producto">${e.nombre}</h3>
         <p class="detalle">${e.categoria}</p>
         <h4 class="precio">${e.precio}</h4>
         <button class="buttonC" id = ${e.id} onClick="clickButton(${e.id})">Comprar</button>
+        <br>
         </div>
         `)
 
@@ -75,50 +77,16 @@ $.get(url, (respuesta, estado)=>{
 })
 
 
-
+////esta es la funcion para compra finalizada
 
 $("#totalCompra").on(`click`, ()=> {
-    let suma = 0;
-    productoAniadido.precio.each(()=>{
-       suma += parseFloat($(this).val());
-       
-});
-
-})
-
-
-/*
-
-temrinar de crear la funcion
+    totalCost = 0
+    let filas = $("#productosListados")[0].children
+    for (let item of filas) {
+      totalCost += parseFloat(item.children[2].textContent)
+    }
+    Swal.fire(`<p class="campos">El total de tu compra es $${totalCost}, ¿deseas continuar?</p>`)
+  });
 
 
-const compraFinalizada = funcion de suma de precios de los productos seleccionados e.precio + e.precio
-
-// este es el alert de sweetalert
-if(Swal.fire('El total de tu compra es ${compraFinzalida}, ¿deseas continuar?')){
-    $("#totalCompra").append(<tr>compraFinalizada</tr>)
-}
-
-let precioTotal = ${e.precio}
-compraFinalizada = precioTotal++
-
-
-
-///// esta es la suma total
-$("#totalCompra").on(`click`, (${})=> {
-    let suma = 0;
-aniadirTabla.precio.each(()=>{
-       suma += parseFloat($(this).val());
-});
-
-})
-
-
-
-let suma = 0;
-aniadirTabla.precio.each(()=>{
-       suma += parseFloat($(this).val());
-});
-
-*/
 

@@ -1,5 +1,26 @@
 [
-       {
+    {
+        "img": "../img/ctenanthe2.webp",
+        "nombre": "Ctenanthe",
+        "categoria": "Plantas",
+        "precio": "900",
+        "id": "1"
+    },
+    {
+        "img": "../img/dieffenbachia.webp",
+        "nombre": "Dieffenbachia",
+        "categoria": "Plantas",
+        "precio": "750",
+        "id": "2"
+    },
+    {
+        "img": "../img/monstera3.webp",
+        "nombre": "Monstera",
+        "categoria": "Plantas",
+        "precio": "1200",
+        "id": "3"
+    },
+    {
         "img": "../img/macetapie.webp",
         "nombre": "Maceta de pie",
         "precio": "2500",
@@ -21,7 +42,3 @@
         "id": "6"
     }
 ]
-
-
-
-
