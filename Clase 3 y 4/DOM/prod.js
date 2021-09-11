@@ -57,8 +57,9 @@
 
 //Funcion de añadir productos a la tabla (carrito)
 
-const aniadirATabla = (productoAniadido) => {
+const aniadirATabla = (event) => {
 
+  let productoAniadido = productos.find(p => p.id == event.target.id)
 
     let ObjToJson = JSON.stringify(productoAniadido)
     localStorage.setItem("productos", ObjToJson)
