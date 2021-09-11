@@ -1,14 +1,11 @@
-//variables con sus selectores html
 
-let btn = $(".buttonC");
-
-let contactForm = $(".contactForm");
-
-let sendBtn = $("#sendBtn");
+/******************************
+ *  OBJETO CON JQUERY 
+ *****************************/
 
 
 
-//objetos html con jquery
+
 
 contactForm.append(`<input id = "inputName" class="form-control campos" type = "text"  placeholder="Nombre y Apellido" autocomplete="off">
 <input id = "inputEmail" class="form-control campos" type = "email"   placeholder="Email" autocomplete="off">
@@ -20,7 +17,34 @@ sendBtn.append(`<form><br>
 <button type = "submit" class="btn btn-light btn-md buttonC"  data-toggle="modal" href="productos-detalle.html">ENVIAR</button>
 </form><br>`)
 
-//esta es la funcion que hace aparecer al modal
+
+
+
+
+/******************************
+ *  VARIABLES 
+ *****************************/
+
+
+
+
+
+ let btn = $(".buttonC");
+
+ let contactForm = $(".contactForm");
+ 
+ let sendBtn = $("#sendBtn");
+ 
+
+
+
+/******************************
+ *  EVENTOS Y FUNCIONES 
+ *****************************/
+
+
+
+
 
 sendBtn.click((e) => {
     
