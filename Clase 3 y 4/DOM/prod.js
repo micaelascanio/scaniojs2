@@ -30,9 +30,9 @@
 
 
 
- const producto1 = new producto("1","Ctenanthe", "Plantas", 900, "../img/ctenanthe2.webp");
- const producto2 = new producto("2","Dieffenbachia", "Plantas", 750, "../img/dieffenbachia.webp");
- const producto3 = new producto("3","Monstera", "Plantas", 1200,"../img/monstera3.webp");
+ const producto1 = new producto("1","Ctenanthe", "Plantas", 900, "../img/ctenanthe2.jpg");
+ const producto2 = new producto("2","Dieffenbachia", "Plantas", 750, "../img/dieffenbachia.jpg");
+ const producto3 = new producto("3","Monstera", "Plantas", 1200,"../img/monstera3.jpg");
  
  
  const productos = [producto1, producto2, producto3]
@@ -59,6 +59,8 @@
 
 const aniadirATabla = (event) => {
 
+  debugger
+
   let productoAniadido = productos.find(p => p.id == event.target.id)
 
     let ObjToJson = JSON.stringify(productoAniadido)
@@ -71,6 +73,7 @@ const aniadirATabla = (event) => {
       </tr>`)
 
 }
+
 
 
 
@@ -112,11 +115,12 @@ productos.forEach(e => {
   div1.appendChild(h41)
   div1.appendChild(botonComprar)
 
-  div1.setAttribute("class", "div1")
-  h31.setAttribute("class", "producto")
-  p1.setAttribute("class", "detalle")
+  div1.setAttribute("class", "div1 col mb-4 card")
+  div1.setAttribute("style","width: 18rem")
+  h31.setAttribute("class", "card-title producto")
+  p1.setAttribute("class","card-text detalle")
   h41.setAttribute("class", "precio")
-  img1.setAttribute("class", "img1")
+  img1.setAttribute("class","img1 card-img-top")
   botonComprar.setAttribute("class", "btn btn-light")
   botonComprar.setAttribute("class", "col-lg-4 row-sm-1")
   botonComprar.setAttribute("class", "buttonC")
@@ -175,11 +179,11 @@ $.get(url, (respuesta, estado)=>{
         respuesta.forEach (e=> {
           
         $("#productosMacetas").append(`
-        <div class="div1">
+        <div class="div1 col mb-4 card">
         <br>
-        <img class="img1" src=${e.img}></img>
-        <h3 class="producto">${e.nombre}</h3>
-        <p class="detalle">${e.categoria}</p>
+        <img class="img1 card-img-top" src=${e.img}></img>
+        <h3 class="producto card-title">${e.nombre}</h3>
+        <p class="detalle card-text">${e.categoria}</p>
         <h4 class="precio">${e.precio}</h4>
         <button class="buttonC" id = ${e.id} onClick="clickButton(${e.id})">Comprar</button>
         <br>
@@ -190,7 +194,6 @@ $.get(url, (respuesta, estado)=>{
     }
 
 })
-
 
 
 
