@@ -1,26 +1,3 @@
-
-/******************************
- *  OBJETO CON JQUERY 
- *****************************/
-
-
-
-
-
-contactForm.append(`<input id = "inputName" class="form-control campos" type = "text"  placeholder="Nombre y Apellido" autocomplete="off">
-<input id = "inputEmail" class="form-control campos" type = "email"   placeholder="Email" autocomplete="off">
-<input id = "inputNumber" class="form-control campos" type = "number"  placeholder="Teléfono" autocomplete="off">
-<input id = "inputMessage" class="form-control campos" type = "text" id="exampleFormControlTextarea1" rows="3" placeholder="Mensaje" autocomplete="off"></input>
-`)
-
-sendBtn.append(`<form><br>
-<button type = "submit" class="btn btn-light btn-md buttonC"  data-toggle="modal" href="productos-detalle.html">ENVIAR</button>
-</form><br>`)
-
-
-
-
-
 /******************************
  *  VARIABLES 
  *****************************/
@@ -35,6 +12,31 @@ sendBtn.append(`<form><br>
  
  let sendBtn = $("#sendBtn");
  
+
+
+
+
+/******************************
+ *  OBJETO CON JQUERY 
+ *****************************/
+
+
+
+
+ contactForm.append(`<input id = "inputName" class="form-control campos" type = "text"  placeholder="Nombre y Apellido" autocomplete="off">
+<input id = "inputEmail" class="form-control campos" type = "email"   placeholder="Email" autocomplete="off">
+<input id = "inputNumber" class="form-control campos" type = "number"  placeholder="Teléfono" autocomplete="off">
+<input id = "inputMessage" class="form-control campos" type = "text" id="exampleFormControlTextarea1" rows="3" placeholder="Mensaje" autocomplete="off"></input>
+`)
+
+
+
+sendBtn.append(`<form><br>
+<button type = "submit" class="btn btn-light btn-md buttonC"  data-toggle="modal" href="productos-detalle.html">ENVIAR</button>
+</form><br>`)
+
+
+
 
 
 
@@ -60,8 +62,18 @@ sendBtn.click((e) => {
 
     let inputMessage = $("#inputMessage").val();
 
-    Swal.fire(`<p class="campos">Gracias por escribirnos, te contactaremos al siguiente email: ${inputEmail}</p>`)
+    if(inputEmail==""){
+       
+        Swal.fire({
+            icon: 'error',
+            title: '¡Espera!',
+            text: 'Este es un campo requerido, presiona OK para completarlo',
+            
+          })
+     }
+     else{ 
+        Swal.fire(`<p class="campos">Gracias por escribirnos, te contactaremos al siguiente email: ${inputEmail}</p>`)
 
-   // location.reload()
+     }
+
 })
-

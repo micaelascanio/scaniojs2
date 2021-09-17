@@ -33,8 +33,8 @@
  const producto1 = new producto("1","Ctenanthe", "Plantas", 900, "../img/ctenanthe2.jpg");
  const producto2 = new producto("2","Dieffenbachia", "Plantas", 750, "../img/dieffenbachia.jpg");
  const producto3 = new producto("3","Monstera", "Plantas", 1200,"../img/monstera3.jpg");
- 
- 
+
+
  const productos = [producto1, producto2, producto3]
 
  carrito = []
@@ -52,16 +52,15 @@
  *****************************/
 
 
-
+const aniadirProducto = (e) => {
+  let productoAniadido = productos.find(p => p.id == e.target.id)
+  aniadirATabla(productoAniadido);
+}
 
 
 //Funcion de añadir productos a la tabla (carrito)
 
-const aniadirATabla = (event) => {
-
-  debugger
-
-  let productoAniadido = productos.find(p => p.id == event.target.id)
+const aniadirATabla = (productoAniadido) => {
 
     let ObjToJson = JSON.stringify(productoAniadido)
     localStorage.setItem("productos", ObjToJson)
@@ -81,7 +80,7 @@ const aniadirATabla = (event) => {
 
 const eliminarProducto = (productoAniadido) => {
 
-    productoAniadido.parentElement.parentElement.remove() 
+    productoAniadido.parentElement.parentElement.remove()
 }
 
 
@@ -106,7 +105,7 @@ productos.forEach(e => {
   botonComprar.textContent = "Comprar"
   botonComprar.id = e.id
 
-  botonComprar.addEventListener("click", aniadirATabla)
+  botonComprar.addEventListener("click", aniadirProducto)
 
   productosPlantas.appendChild(div1)
   div1.appendChild(img1)
@@ -125,7 +124,7 @@ productos.forEach(e => {
   botonComprar.setAttribute("class", "col-lg-4 row-sm-1")
   botonComprar.setAttribute("class", "buttonC")
 
-   
+
 
 })
 
@@ -156,7 +155,6 @@ $("#totalCompra").on(`click`, ()=> {
 //Agrega los productos del JSON a la tabla
 
 const clickButton = (id) => {
-
   $.get(url, (respuesta, estado)=>{
 
       if (estado === "success") {
@@ -175,9 +173,8 @@ const clickButton = (id) => {
 $.get(url, (respuesta, estado)=>{
 
     if (estado === "success") {
-
         respuesta.forEach (e=> {
-          
+
         $("#productosMacetas").append(`
         <div class="div1 col mb-4 card">
         <br>
@@ -194,7 +191,6 @@ $.get(url, (respuesta, estado)=>{
     }
 
 })
-
 
 
 
