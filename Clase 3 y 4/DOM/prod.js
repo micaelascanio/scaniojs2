@@ -43,6 +43,62 @@
 
  const url = "./productos.json"
 
+ 
+
+//Variable para LIGHTMODE
+
+
+
+
+const lightMode = () =>{
+  $("body").css("background-color","white")
+  $("nav").css({
+    "background-color":"white",
+    "color":"grey",
+  })
+  $("div").css("background-color","white")
+  $("section").css("background-color","white")
+  $(".detalle").css("color","black")
+  $(".precio").css("color","black")
+  $(".buttonC").css({
+    "background-color":"white",
+    "color":"grey",
+  }) 
+  $(".table").css("color","black")
+  localStorage.setItem("theme","light")
+}
+
+
+//Variable para DARKMODE 
+
+
+const darkMode = () =>{
+  $("body").css("background-color","black")
+  $("nav").css({
+    "background-color":"black",
+    "color":"white",
+  })
+  $("div").css({
+    "background-color":"black",
+    "color":"white",
+  })
+  $("div.card").hover(function(e) { 
+    $(this).css("background-color",e.type === "mouseenter"?"#AFCC94":"transparent") 
+  })  
+  $("section").css({
+    "background-color":"black",
+    "color":"white",
+  })
+  $(".detalle").css("color","white")
+  $(".precio").css("color","white")
+  $(".buttonC").css({
+    "background-color":"lightgrey",
+    "color":"black",
+  })
+  $(".table").css("color","white")
+
+  localStorage.setItem("theme","dark")
+}
 
 
 
@@ -70,6 +126,7 @@ const aniadirATabla = (productoAniadido) => {
       <td>${productoAniadido.precio}</td>
       <td><button class= "btnBorrar" id="btnBorrar${productoAniadido.id}" onClick="eliminarProducto(this)">Quitar</button></td>
       </tr>`)
+      Swal.fire(`<p class="campos">Agregaste el producto: ${productoAniadido.nombre} a tu carrito, podrás visualizarlo en la tabla al final de la página</p>`)
 
 }
 
@@ -81,6 +138,13 @@ const aniadirATabla = (productoAniadido) => {
 const eliminarProducto = (productoAniadido) => {
 
     productoAniadido.parentElement.parentElement.remove()
+
+    Swal.fire({
+      icon: 'error',
+      title: '¡Eliminaste el producto seleccionado!',
+      text: 'Prioná OK para volver al carrito',
+
+  })
 }
 
 
@@ -144,6 +208,23 @@ $("#totalCompra").on(`click`, ()=> {
 
 
 
+//Funcion para el DARKMODE
+
+$("#darkModeButton").on("click", () =>{
+
+  if(localStorage.getItem("theme") == "dark"){
+    lightMode()
+  }
+  else{
+    darkMode()
+  }
+})
+
+
+
+
+
+
 /******************************
  *  PETICIONES
  *****************************/
@@ -195,5 +276,4 @@ $.get(url, (respuesta, estado)=>{
 
 
 
-
-
+    

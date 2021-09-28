@@ -112,12 +112,16 @@
     color: white;
     text-decoration: none;
 }
-.div1, .div2{
+.div1{
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
+}
+.div1:hover{
+    background-color: #AFCC94;
+    border-radius: 10px;
 }
 
 .img1{
