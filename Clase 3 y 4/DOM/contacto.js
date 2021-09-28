@@ -33,7 +33,10 @@ const lightMode = () => {
         "color": "grey",
     })
     $(".campos").css("color", "black")
-    $("input").css("background-color", "white")
+    $("input").css({
+        "background-color": "white",
+        "border-color": "lightgrey",
+    })
 
     localStorage.setItem("theme", "light")
 }
